@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import 'normalize.css';
 import './index.css';
-import Botao from './components/Botao';
 import Cardapio from './pages/Cardapio';
 
 const root = ReactDOM.createRoot(
