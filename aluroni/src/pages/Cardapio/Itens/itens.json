@@ -1,0 +1,119 @@
+[
+    {
+        "titulo": "Macarrão mediterrâneo",
+        "descricao": "Macarrão spaghetti com frutos-do-mar e especíarias, especialidade da cozinha. Atenção: Contém camarão e outros frutos-do-mar!",
+        "foto": "/assets/pratos/macarrao_mediterraneo.png",
+        "porcao": 400,
+        "serve": 2,
+        "preco": 73.0,
+        "id": 1,
+        "categoria": {
+            "id": 1,
+            "label": "Massas"
+        }
+    },
+    {
+        "titulo": "Macarrão da casa",
+        "descricao": "Macarrão com frutos-do-mar e especíarias, especialidade da cozinha. Atenção: Contém camarão e outros frutos-do-mar!",
+        "foto": "/assets/pratos/macarrao_da_casa.png",
+        "porcao": 400,
+        "serve": 2,
+        "preco": 54.0,
+        "id": 2,
+        "categoria": {
+            "id": 1,
+            "label": "Massas"
+        }
+    },
+    {
+        "titulo": "Macarrão com chilli",
+        "descricao": "Macarrão fetuccine com molho de chilli e especiárias.",
+        "foto": "/assets/pratos/macarrao_com_chilli.png",
+        "porcao": 350,
+        "serve": 1,
+        "preco": 58.0,
+        "id": 3,
+        "categoria": {
+            "id": 1,
+            "label": "Massas"
+        }
+    },
+    {
+        "titulo": "Salada da casa com salmão grelhado",
+        "descricao": "Salada da casa (alface, rúcula, cenoura) com salmão.",
+        "foto": "/assets/pratos/salada_da_casa.png",
+        "porcao": 450,
+        "serve": 1,
+        "preco": 42.0,
+        "id": 4,
+        "categoria": {
+            "id": 2,
+            "label": "Carnes"
+        }
+    },
+    {
+        "titulo": "Bife com batatas",
+        "descricao": "Bife de boi (150g) na chapa, com batatas fritas. Acompanha arroz e molhos.",
+        "foto": "/assets/pratos/bife_com_batatas.png",
+        "porcao": 550,
+        "serve": 2,
+        "preco": 86.0,
+        "id": 5,
+        "categoria": {
+            "id": 2,
+            "label": "Carnes"
+        }
+    },
+    {
+        "titulo": "Picanha picada com legumes e massa",
+        "descricao": "400g de picanha picada, com legumes grelhados e massa escolhida pelo cliente.",
+        "foto": "/assets/pratos/picanha_picada.png",
+        "porcao": 850,
+        "serve": 3,
+        "preco": 123.0,
+        "id": 6,
+        "categoria": {
+            "id": 3,
+            "label": "Combos"
+        }
+    },
+    {
+        "titulo": "Lasagna vegana (carne de soja)",
+        "descricao": "Lasagna 100% vegana feita com carne de soja e massa especial.",
+        "foto": "/assets/pratos/lasagna_vegana.png",
+        "porcao": 350,
+        "serve": 1,
+        "preco": 45.0,
+        "id": 7,
+        "categoria": {
+            "id": 4,
+            "label": "Veganos"
+        }
+    },
+    {
+        "titulo": "Salada especial",
+        "descricao": "Salada com abacate, manga, alface, grão de bico e muito mais.",
+        "foto": "/assets/pratos/salada_especial.png",
+        "porcao": 350,
+        "serve": 1,
+        "preco": 37.0,
+        "id": 8,
+        "categoria": {
+            "id": 4,
+            "label": "Veganos"
+        }
+    },
+    {
+        "titulo": "Almôndegas",
+        "descricao": "Porção de almôndegas com sour cream, cebola e tempêros. Acompanha arroz ou massa.",
+        "foto": "/assets/pratos/almondegas.png",
+        "porcao": 740,
+        "serve": 3,
+        "preco": 120.0,
+        "id": 9,
+        "categoria": {
+            "id": 3,
+            "label": "Combos"
+        }
+    }
+]
