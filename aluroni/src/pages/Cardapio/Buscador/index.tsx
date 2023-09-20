@@ -10,6 +10,7 @@ export default function Buscador({ busca, setBusca }: BuscadorProps) {
     return (
         <div className={style.buscador}>
             <input
+                placeholder='Buscar'
                 value={busca}
                 onChange={evento => setBusca(evento.target.value)}
             />
