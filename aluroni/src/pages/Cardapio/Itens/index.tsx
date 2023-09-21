@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Item from './Item';
-import itens from './itens.json';
+import cardapio from 'data/cardapio.json';
 import style from './Itens.module.scss';
 
 interface ItensProps {
@@ -10,7 +10,7 @@ interface ItensProps {
 }
 
 export default function Itens({ filtro, busca, ordenador }: ItensProps) {
-	const [itensCardapio, setItensCardapio] = useState(itens);
+	const [itensCardapio, setItensCardapio] = useState(cardapio);
 
 	function filtrarPorBusca(titulo: string) {
 		const regex = new RegExp(busca, 'i');
@@ -23,7 +23,7 @@ export default function Itens({ filtro, busca, ordenador }: ItensProps) {
 		return filtro === id;
 	}
 
-	function ordenar(lista: typeof itens) {
+	function ordenar(lista: typeof cardapio) {
 		switch (ordenador) {
 		case 'porcao':
 			return lista.sort((a, b) => a.porcao > b.porcao ? 1 : -1);
@@ -37,7 +37,7 @@ export default function Itens({ filtro, busca, ordenador }: ItensProps) {
 	}
 
 	useEffect(() => {
-		const lista = itens.filter(item => filtrarPorBusca(item.titulo) && filtrarPorCategoria(item.categoria.id));
+		const lista = cardapio.filter(item => filtrarPorBusca(item.titulo) && filtrarPorCategoria(item.categoria.id));
 		if (ordenador) lista.sort(x => x.preco);
 		setItensCardapio(ordenar(lista));
 	}, [filtro, busca, ordenador]);
