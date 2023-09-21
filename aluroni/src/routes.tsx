@@ -17,10 +17,10 @@ export default function AppRouter() {
 					<Route path='/' element={<PaginaPadrao />}>
 						<Route index element={<Inicio />} />
 						<Route path='cardapio' element={<Cardapio />} />
-						<Route path='prato/:id' element={<Prato />} />
 					</Route>
 					<Route path='sobre' element={<Sobre />} />
-					<Route path='*/*' element={<NotFound />}></Route>
+					<Route path='prato/:id' element={<Prato />} />
+					<Route path='*' element={<NotFound />}></Route>
 				</Routes>
 				<Rodape />
 			</BrowserRouter>
