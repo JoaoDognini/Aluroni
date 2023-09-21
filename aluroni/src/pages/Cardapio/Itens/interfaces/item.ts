@@ -1,4 +1,4 @@
-import { ICategoria } from "./categoria";
+import { ICategoria } from './categoria';
 
 export interface IItem {
     titulo: string;
