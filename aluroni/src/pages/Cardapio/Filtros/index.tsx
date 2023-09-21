@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import filtros from './filtros.json';
-import style from './Filtros.module.scss';
+import styles from './Filtros.module.scss';
 
 interface IFiltro {
     id: number;
@@ -19,12 +19,12 @@ export default function Filtros({ filtro, setFiltro }: FiltrosProps) {
 	}
 
 	return (
-		<div className={style.filtros}>
+		<div className={styles.filtros}>
 			{filtros.map(filtroSelecionado => (
 				<button
 					className={classNames({
-						[style.filtros__filtro]: true,
-						[style['filtros__filtro--ativo']]: filtro === filtroSelecionado.id,
+						[styles.filtros__filtro]: true,
+						[styles['filtros__filtro--ativo']]: filtro === filtroSelecionado.id,
 					})}
 					key={filtroSelecionado.id}
 					onClick={() => selecionarFiltro(filtroSelecionado)}

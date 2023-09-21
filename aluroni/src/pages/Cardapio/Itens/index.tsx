@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Item from './Item';
 import cardapio from 'data/cardapio.json';
-import style from './Itens.module.scss';
+import styles from './Itens.module.scss';
 
 interface ItensProps {
     filtro: number | null;
@@ -43,7 +43,7 @@ export default function Itens({ filtro, busca, ordenador }: ItensProps) {
 	}, [filtro, busca, ordenador]);
 
 	return (
-		<div className={style.itens}>
+		<div className={styles.itens}>
 			{itensCardapio.map(item => <Item key={item.id} {...item} />)}
 		</div>
 	);

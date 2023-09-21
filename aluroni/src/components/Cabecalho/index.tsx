@@ -1,9 +1,9 @@
-import style from './Cabecalho.module.scss';
+import styles from './Cabecalho.module.scss';
 
 export default function Cabecalho() {
 	return (
-		<header className={style.cabecalho}>
-			<div className={style.cabecalho__texto}>
+		<header className={styles.cabecalho}>
+			<div className={styles.cabecalho__texto}>
 				A casa do código e da massa
 			</div>
 		</header>

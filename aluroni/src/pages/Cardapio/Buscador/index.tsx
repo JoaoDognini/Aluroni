@@ -1,4 +1,4 @@
-import style from './Buscador.module.scss';
+import styles from './Buscador.module.scss';
 import { CgSearch } from 'react-icons/cg';
 
 interface BuscadorProps {
@@ -8,7 +8,7 @@ interface BuscadorProps {
 
 export default function Buscador({ busca, setBusca }: BuscadorProps) {
 	return (
-		<div className={style.buscador}>
+		<div className={styles.buscador}>
 			<input
 				placeholder='Buscar'
 				value={busca}
