@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import filtros from './filtros.json';
 import styles from './Filtros.module.scss';
+import { memo } from 'react';
 
 interface IFiltro {
     id: number;
@@ -12,7 +13,7 @@ interface FiltrosProps {
     setFiltro: React.Dispatch<React.SetStateAction<number | null>>
 }
 
-export default function Filtros({ filtro, setFiltro }: FiltrosProps) {
+export function Filtros({ filtro, setFiltro }: FiltrosProps) {
 	function selecionarFiltro(filtroSelecionado: IFiltro) {
 		if (filtro === filtroSelecionado.id) return setFiltro(null);
 		return setFiltro(filtroSelecionado.id);
@@ -35,3 +36,5 @@ export default function Filtros({ filtro, setFiltro }: FiltrosProps) {
 		</div>
 	);
 }
+
+export default memo(Filtros);

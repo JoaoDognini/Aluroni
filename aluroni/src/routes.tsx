@@ -1,27 +1,31 @@
 import Menu from 'components/Menu';
-import PaginaPadrao from 'components/PaginaPadrao';
 import Rodape from 'components/Rodape';
-import Cardapio from 'pages/Cardapio';
-import Inicio from 'pages/Inicio';
-import NotFound from 'pages/NotFound';
-import Prato from 'pages/Prato';
-import Sobre from 'pages/Sobre';
+import { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+const Cardapio = lazy(() => import('pages/Cardapio'));
+const PaginaPadrao = lazy(() => import('components/PaginaPadrao'));
+const Inicio = lazy(() => import('pages/Inicio'));
+const NotFound = lazy(() => import('pages/NotFound'));
+const Prato = lazy(() => import('pages/Prato'));
+const Sobre = lazy(() => import('pages/Sobre'));
 
 export default function AppRouter() {
 	return (
 		<main className='container'>
 			<BrowserRouter>
 				<Menu />
-				<Routes>
-					<Route path='/' element={<PaginaPadrao />}>
-						<Route index element={<Inicio />} />
-						<Route path='cardapio' element={<Cardapio />} />
-					</Route>
-					<Route path='sobre' element={<Sobre />} />
-					<Route path='prato/:id' element={<Prato />} />
-					<Route path='*' element={<NotFound />}></Route>
-				</Routes>
+				<Suspense fallback={<p>Carregando...</p>}>
+					<Routes>
+						<Route path='/' element={<PaginaPadrao />}>
+							<Route index element={<Inicio />} />
+							<Route path='cardapio' element={<Cardapio />} />
+						</Route>
+						<Route path='sobre' element={<Sobre />} />
+						<Route path='prato/:id' element={<Prato />} />
+						<Route path='*' element={<NotFound />}></Route>
+					</Routes>
+				</Suspense>
 				<Rodape />
 			</BrowserRouter>
 		</main>

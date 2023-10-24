@@ -1,17 +1,18 @@
 import classNames from 'classnames';
 import styles from './Ordenador.module.scss';
 import opcoes from './opcoes-ordenar.json';
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
+import { MdKeyboardArrowUp } from 'react-icons/md';
+import { memo } from 'react';
 import { useState } from 'react';
 
 export type OpcoesOrdenador = '' | 'porcao' | 'qtd_pessoas' | 'preco';
 
 interface OrdenadorProps {
-    ordenador: OpcoesOrdenador;
-    setOrdenador: React.Dispatch<React.SetStateAction<OpcoesOrdenador>>;
+	ordenador: OpcoesOrdenador;
+	setOrdenador: React.Dispatch<React.SetStateAction<OpcoesOrdenador>>;
 }
 
-export default function Ordenador({ ordenador, setOrdenador }: OrdenadorProps) {
+export function Ordenador({ ordenador, setOrdenador }: OrdenadorProps) {
 	const [aberto, setAberto] = useState(false);
 	const ordenadorSelecionado = ordenador && opcoes.find(opcao => opcao.value === ordenador)?.nome;
 
@@ -25,7 +26,13 @@ export default function Ordenador({ ordenador, setOrdenador }: OrdenadorProps) {
 			onBlur={() => setAberto(false)}
 		>
 			<span>{ordenadorSelecionado || 'Ordenar Por'}</span>
-			{aberto ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} />}
+			<MdKeyboardArrowUp
+				style={{
+					transform: `rotate(${aberto ? 0 : 180}deg)`
+				}}
+				size={20}
+			/>
+			{/* {aberto ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} />} */}
 			<div className={
 				classNames({
 					[styles.ordenador__options]: true,
@@ -45,3 +52,5 @@ export default function Ordenador({ ordenador, setOrdenador }: OrdenadorProps) {
 		</button>
 	);
 }
+
+export default memo(Ordenador);
