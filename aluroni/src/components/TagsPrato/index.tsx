@@ -18,7 +18,7 @@ export default function TagsPrato({ prato }: TagsPratoProps) {
 			</div>
 
 			<div className={styles.tags__porcao}>
-				{prato.porcao}
+				{prato.porcao}g
 			</div>
 
 			<div className={styles.tags__qtdpessoas}>
